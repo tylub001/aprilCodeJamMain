@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./fonts/Karla-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/Karla-Light.ttf") format("truetype");
+  }
