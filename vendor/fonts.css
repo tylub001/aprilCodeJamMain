@@ -11,3 +11,10 @@
     font-weight: 400;
     src: url("./fonts/Karla-Light.ttf") format("truetype");
   }
+
+  @font-face {
+    font-family: "Tangerine";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/Tangerine-Regular.ttf") format("truetype");
+  }
