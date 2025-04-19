@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/johannes-plenio-qkfxBc2NQ18-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.header__image {
+  background-position: center;
+  background-size: cover;
+  height: 720px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__links {
+  display: flex;
+  gap: 20px;
+  margin: 8px 0 0;
+  list-style-type: none;
+}
