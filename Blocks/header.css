@@ -1,0 +1,130 @@
+.header {
+  height: 100vh;
+  background-image: url(../images/johannes-plenio-qkfxBc2NQ18-unsplash.jpg);
+  background-size: cover;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__title {
+  margin: 30vh 5vw 0;
+  max-width: 800px;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  font-size: 80px;
+  color: whitesmoke;
+  letter-spacing: 0.5px;
+}
+
+.welcome {
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
+  color: white;
+  position: absolute;
+  top: 8%;
+  opacity: 0.1;
+  font-size: 20em;
+  letter-spacing: 3px;
+}
+
+.header__button {
+  position: relative;
+  left: 30%;
+  border: 2px solid whitesmoke;
+  background-color: transparent;
+  border-radius: 40px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1em;
+  box-shadow: inset 0px 0px 12px rgba(240, 255, 255, 0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.header__button:hover {
+  opacity: 0.6;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  width: 70px;
+  height: 50px;
+  padding-top: 10px;
+}
+
+.nav__links {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.nav__link:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .nav__links {
+    gap: 10px;
+    align-self: center;
+    padding: 0;
+  }
+
+  .nav__logo {
+    width: 50px;
+    height: 40px;
+    padding-top: 10px;
+  }
+
+  .header__title {
+    font-size: 2.72em;
+    position: relative;
+    bottom: -230px;
+    transform: translateX(-30%);
+    left: 27%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__button {
+    width: auto;
+    padding: 15px 20px;
+    position: relative;
+    bottom: -430px;
+    left: 33%;
+  }
+
+  .welcome {
+    top: 50%;
+    font-size: 8em;
+    left: 25%;
+    transform: translateX(
+      -30%
+    ); /*shifts an element 30% to the left relative to its own width.*/
+  }
+}

@@ -1,0 +1,97 @@
+.about {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/orang1.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.about__title {
+  font-size: 42px;
+}
+
+.about__description {
+  font-size: 48px;
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  color: grey;
+}
+
+.about__paragraph {
+  font-size: 30px;
+  margin-top: 20px;
+  max-width: 100%;
+  text-align: left;
+  padding: 40px 0 0 40px;
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+  text-indent: 20px;
+}
+
+.about__paragraph2 {
+  padding: 40px;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 40px;
+}
+
+.about__paragragh3 {
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
+  font-size: 48px;
+  color: grey;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .about__paragragh3 {
+    font-size: 30px;
+  }
+
+  .about__paragraph2 {
+    font-size: 22px;
+    padding: 20px;
+  }
+
+  .about__paragraph {
+    font-size: 18px;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .about__description {
+    font-size: 28px;
+    padding: 8px;
+  }
+
+  .about__title {
+    font-size: 30px;
+  }
+
+  .about {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 581px) {
+  .about {
+    height: 100vh;
+  }
+}

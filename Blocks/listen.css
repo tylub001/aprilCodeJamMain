@@ -22,7 +22,7 @@
 }
 
 .listen__title {
-  font-family: Tangerine;
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
   font-weight: 500;
   font-size: 70px;
   color: darkred;
@@ -102,7 +102,7 @@
   max-width: 100%;
   justify-content: space-between;
   margin: 12px 0 20px;
-  font-family: Tangerine;
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
   font-size: 40px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
@@ -141,7 +141,7 @@
   border: none;
   background-color: rgb(15, 15, 167);
   box-shadow: inset 0px 0px 12px rgba(240, 255, 255, 0.6);
-  color: antiquewhite;
+  color: rgb(247, 247, 247);
   font-size: 20px;
   box-shadow: 0 4px 10px rgba(139, 0, 0, 0.6);
   cursor: pointer;
@@ -181,7 +181,7 @@
 }
 
 .modal__quote {
-  font-family: "Tangerine", cursive;
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
   font-size: 70px;
   color: whitesmoke;
   opacity: 0.9;
