@@ -2,7 +2,6 @@
   position: relative;
   height: 100vh;
   display: flex;
-
   justify-content: center;
   text-align: center;
   color: black;
@@ -16,8 +15,8 @@
   background-image: url(../images/orang1.jpg);
   background-size: cover;
   background-position: center bottom;
-  opacity: 0.2; /* Ensures only the background is faded */
-  z-index: -1; /* Pushes it behind the content */
+  opacity: 0.2;
+  z-index: -1;
 }
 
 .about__title {
@@ -26,7 +25,7 @@
 
 .about__description {
   font-size: 48px;
-  font-family: Tangerine;
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
   margin: 0;
   padding: 0;
   letter-spacing: 1px;
@@ -47,14 +46,14 @@
 
 .about__paragraph2 {
   padding: 40px;
-  max-width: 800px; /* Adjust based on design preference */
-  text-align: center; /* Optional for better visual balance */
+  max-width: 800px;
+  text-align: center;
   margin: 0 auto;
   font-size: 40px;
 }
 
 .about__paragragh3 {
-  font-family: Tangerine;
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
   font-size: 48px;
   color: grey;
   margin: 0;
