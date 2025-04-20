@@ -1,7 +1,7 @@
 @import url(./vendor/fonts.css);
-@import url(./Blocks/listen.css);
-@import url(./Blocks/header.css);
-@import url(./Blocks/about.css);
+@import url(./blocks/listen.css);
+@import url(./blocks/header.css);
+@import url(./blocks/about.css);
 
 body {
   font-family: Karla;
