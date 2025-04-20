@@ -7,9 +7,61 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
   </head>
-  <body>
-    <header></header>
+  <body class="page">
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="./images/Logo66.PNG"
+          alt="breathewell logo"
+          class="nav__logo"
+        />
+        <ul class="nav__links">
+          <li>
+            <a class="nav__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#listen">Listen</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#">Breathe</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__container">
+        <p class="welcome">Welcome</p>
+        <h1 class="header__title">Breathe Well</h1>
+        <a href="#listen">
+          <button class="header__button">Explore</button>
+        </a>
+      </div>
+    </header>
     <main>
+      <section class="about" id="about">
+        <div class="about__title">
+          <h2>About BreatheWell</h2>
+          <p class="about__description">
+            Welcome to BreatheWell, your space for mindfulness and relaxation...
+          </p>
+          <p class="about__paragraph">
+            Imagine a space where you can take a deep breath, slow down and let
+            go of stress. In a world that is constantly moving at full speed, it
+            is important to take the time to pause and reset.
+          </p>
+          <p class="about__paragraph2">
+            BreatheWell is your online <em>sanctuary</em> where you can
+            disconnect from the world around you and reconnect with yourself. It
+            is a space designed to make self care feel effortless. Whether you
+            need a simple breathing exercise or a deep mediataion session,
+            BreatheWell is there to create a truly relaxing experience.
+          </p>
+          <p class="about__paragragh3">
+            So take a deep breath and step into calm.
+          </p>
+        </div>
+      </section>
       <section class="listen" id="listen">
         <div class="listen__content">
           <div class="listen__text-content">
@@ -37,66 +89,79 @@
               space to grow, heal, and show up with clarity and strength in
               every part of your life.
             </p>
+
+            <button id="quoteButton" class="quote__button">
+              Get a Positive Quote
+            </button>
+            <div class="modal" id="quoteModal">
+              <div class="modal__container">
+                <button class="modal__close-btn">&times;</button>
+                <p id="quoteDisplay" class="modal__quote"></p>
+              </div>
+            </div>
           </div>
           <ul class="listen__videos">
             <li>
-              <iframe
-                class="listen__iframe"
-                style="border-radius: 12px"
-                src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZqd5JICZI0u?utm_source=generator"
-                width="100%"
-                height="352"
-                frameborder="0"
-                allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+              <div class="iframe-container">
+                <div class="click-overlay"></div>
+                <iframe
+                  class="listen__iframe"
+                  style="border-radius: 12px"
+                  src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZqd5JICZI0u?utm_source=generator"
+                  width="100%"
+                  height="352"
+                  frameborder="0"
+                  allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
+              </div>
               <p class="listen__video-caption">
                 <span class="serenity">~ Sernenity ~</span>
                 <span id="heart" class="heart unliked">♡</span>
               </p>
             </li>
             <li>
-              <iframe
-                class="listen__iframe"
-                style="border-radius: 12px"
-                src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdzGIPNRTvyN?utm_source=generator"
-                width="100%"
-                height="352"
-                frameborder="0"
-                allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+              <div class="iframe-container">
+                <div class="click-overlay"></div>
+                <iframe
+                  class="listen__iframe"
+                  style="border-radius: 12px"
+                  src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdzGIPNRTvyN?utm_source=generator"
+                  width="100%"
+                  height="352"
+                  frameborder="0"
+                  allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
+              </div>
               <p class="listen__video-caption">
                 <span>~ Peace ~</span>
                 <span id="heart" class="heart unliked">♡</span>
               </p>
             </li>
             <li>
-              <iframe
-                class="listen__iframe"
-                style="border-radius: 12px"
-                src="https://open.spotify.com/embed/album/75BHtsdsBUDhCUhujcuBPu?utm_source=generator"
-                width="100%"
-                height="352"
-                frameborder="0"
-                allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+              <div class="iframe-container">
+                <div class="click-overlay"></div>
+                <iframe
+                  class="listen__iframe"
+                  style="border-radius: 12px"
+                  src="https://open.spotify.com/embed/album/75BHtsdsBUDhCUhujcuBPu?utm_source=generator"
+                  width="100%"
+                  height="352"
+                  frameborder="0"
+                  allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
+              </div>
               <p class="listen__video-caption">
                 <span>~ Relaxation ~</span>
                 <span id="heart" class="heart unliked">♡</span>
               </p>
             </li>
           </ul>
-        </div>
-        <div class="section__footer">
-          <p>
-            "Learn to be calm, and you will always be happy." – Paramahansa
-            Yogananda
-          </p>
         </div>
       </section>
       <script src="script.js"></script>
