@@ -30,6 +30,7 @@
   padding: 0;
   letter-spacing: 1px;
   color: grey;
+  text-shadow: 2px 2px 8px; 
 }
 
 .about__paragraph {
