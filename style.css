@@ -90,40 +90,31 @@ body {
  transition: transform 0.3s ease; 
 }
 
-@keyframes breathe {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
+.breathing-circle.inhale {
+    animation: expand 4s ease-in-out forwards;
 }
 
-/* .duration-selector {
-    margin: 20px auto;
-    text-align: center;
+.breathing-circle.exhale {
+    animation: shrink 8s ease-in-out forwards;
 }
 
-.duration-btn {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: 2px solid #fff;
-    background: #10002b;
-    color: #fff;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+@keyframes expand {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.4);
+    }
 }
 
-.duration-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
+@keyframes shrink {
+    from {
+        transform: scale(1.4);
+    }
+    to {
+        transform: scale(1);
+    }
 }
-
-.duration-btn.active {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.1);
-} */
 
 .listen__iframe,
 .iframe-container iframe {
