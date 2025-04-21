@@ -37,3 +37,127 @@ document
   .addEventListener("click", function () {
     document.querySelector(".modal").classList.remove("show");
   });
+
+const circle = document.getElementById("breathingCircle");
+const modes = document.querySelectorAll(".guided__mode");
+
+const breathingPatterns = {
+  focus: {
+    inhale: 4000,
+    hold: 4000,
+    exhale: 4000,
+    messages: ["Breathe In", "Hold", "Breathe Out"],
+  },
+  balanced: {
+    inhale: 5000,
+    hold: 5000,
+    exhale: 5000,
+    messages: ["Breathe In", "Hold", "Breathe Out"],
+  },
+  relax: {
+    inhale: 4000,
+    hold: 7000,
+    exhale: 8000,
+    messages: ["Breathe In", "Hold", "Breathe Out"],
+  },
+};
+
+let currentMode = "focus";
+let currentPhase = 0;
+let exerciseTimer;
+let animationInterval;
+let selectedDuration = 60000;
+let activeTimeout = null; 
+let isRunning = false; 
+
+function updateBreathing() {
+  const circle = document.querySelector(".breathing-circle");
+  const pattern = breathingPatterns[currentMode];
+  circle.textContent = pattern.messages[currentPhase]; 
+
+  if (currentPhase === 0) {
+    // Inhale
+    circle.style.transform = "scale(1.5)"; 
+    circle.style.transition = `transform ${pattern.inhale}ms ease-in`;
+  } else if (currentPhase === 1) {
+    // Hold
+    circle.style.transform = "scale(1.5)"; 
+    circle.style.transition = "none"; 
+  } else {
+    // Exhale
+    circle.style.transform = "scale(1)"; 
+    circle.style.transition = `transform ${pattern.exhale}ms ease-out`;
+  }
+}
+
+ function startBreathingCycle() {
+   isRunning = true;
+   currentPhase = 0;
+   if (exerciseTimer) {
+     clearTimeout(exerciseTimer);
+   }
+
+   exerciseTimer = setTimeout(() => {
+     stopBreathingCycle();
+     const circle = document.querySelector(".breathing-circle");
+     circle.textContent = "Session Complete";
+   }, selectedDuration * 1000);
+
+   runPhase();
+ }
+
+ function runPhase() {
+   if (!isRunning) return;
+
+   const pattern = breathingPatterns[currentMode];
+
+   if (currentPhase >= 3) {
+     currentPhase = 0;
+   }
+
+   updateBreathing();
+
+   const durations = [pattern.inhale, pattern.hold, pattern.exhale];
+   const duration = durations[currentPhase];
+
+   activeTimeout = setTimeout(() => {
+     currentPhase++;
+     runPhase();
+   }, duration);
+ }
+
+modes.forEach((mode) => {
+  mode.addEventListener("click", function () {
+    currentMode = this.getAttribute("data-mode");
+    modes.forEach((m) => m.classList.remove("active"));
+    this.classList.add("active");
+    startBreathingCycle();
+  });
+});
+
+const durationButtons = document.querySelectorAll(".duration-btn");
+durationButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    selectedDuration = parseInt(this.getAttribute("data-duration"));
+    durationButtons.forEach((btn) => btn.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+
+function stopBreathingCycle() {
+  isRunning = false;
+  if (activeTimeout) {
+    clearTimeout(activeTimeout);
+    activeTimeout = null;
+  }
+  if (exerciseTimer) {
+    clearTimeout(exerciseTimer);
+    exerciseTimer = null;
+  }
+  
+  currentPhase = 0;
+  const circle = document.querySelector(".breathing-circle");
+  circle.style.transform = "scale(1)";
+  circle.textContent = "Click a mode to begin";
+  updateBreathing();
+}
