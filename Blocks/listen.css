@@ -1,0 +1,319 @@
+.listen {
+  background-image: url(../images/dave-hoefler-lsoogGC_5dg-unsplash.jpg);
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  padding: 0 20px;
+  max-width: 100%;
+  position: relative;
+}
+
+.listen__content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.listen__text-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  max-width: 100%;
+}
+
+.listen__title {
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
+  font-weight: 500;
+  font-size: 70px;
+  color: darkred;
+  max-width: 100%;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  margin: 30px 0 30px;
+}
+
+.listen__subtitle {
+  display: flex;
+  font-style: italic;
+  align-self: center;
+  margin: 0 0 40px;
+}
+
+.listen__paragraph {
+  font-size: 20px;
+  padding: 0 0 40px;
+  width: 620px;
+  box-shadow: 0 4px 10px rgba(139, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  max-width: 620px;
+}
+
+.listen__paragraph1 {
+  width: 60%;
+  box-shadow: 0 4px 10px rgba(139, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.listen__videos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 40px;
+  margin-right: 20px;
+  width: 100%;
+}
+
+.listen__iframe {
+  max-width: 100%;
+  height: 365px;
+  border: none;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.iframe-container {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer; /* Ensures it only fits the iframe */
+}
+
+.click-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+.listen__iframe:hover {
+  transform: scale(1.03);
+}
+
+.listen__video-caption {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  margin: 12px 0 20px;
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
+  font-size: 40px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
+}
+
+.heart {
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.heart:hover {
+  transform: scale(1.3);
+}
+
+.heart.unliked {
+  color: grey;
+  opacity: 0.4;
+}
+
+.heart.filled {
+  color: red;
+  opacity: 1;
+}
+
+.quote__button {
+  max-width: 40%;
+  position: relative;
+  left: 80px;
+  top: 50px;
+  height: 50px;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(15, 15, 167);
+  box-shadow: inset 2px 2px 8px rgba(240, 255, 255, 0.5);
+  color: rgb(247, 247, 247);
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.5s ease;
+}
+
+.quote__button:hover {
+  background-color: rgb(50, 50, 219);
+}
+
+.modal {
+  position: fixed;
+  top: 43vh;
+  width: 60vw;
+  height: 40vh;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__container {
+  border-radius: 20px;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  animation: scaleUp 0.5s ease;
+}
+
+.modal__quote {
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
+  font-size: 70px;
+  color: whitesmoke;
+  opacity: 0.9;
+  text-shadow: 4px 4px 15px rgba(243, 243, 243, 1);
+  letter-spacing: 1px;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s ease, color 0.5s ease;
+}
+
+.modal__close-btn:hover {
+  opacity: 0.4;
+}
+
+@media (max-width: 1360px) {
+  .listen__paragraph1 {
+    color: whitesmoke;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.87);
+  }
+
+  .listen__paragraph {
+    color: whitesmoke;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.87);
+  }
+
+  .modal {
+    width: 50%;
+    height: 50%;
+  }
+
+  .modal__quote {
+    font-size: 60px;
+  }
+}
+
+.listen__video-caption {
+  font-size: 35px;
+}
+
+@media (max-width: 768px) {
+  .listen__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .listen__title {
+    font-size: 40px;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .listen__text-content {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .listen__videos {
+    align-items: center;
+    padding: 20px;
+    margin-right: 0;
+  }
+
+  .listen__paragraph {
+    font-size: 16px;
+    padding: 10px;
+    color: black;
+    text-shadow: none;
+  }
+
+  .listen__paragraph1 {
+    font-size: 16px;
+    padding: 10px;
+    width: 80%;
+    color: black;
+    text-shadow: none;
+  }
+
+  .heart.unliked {
+    color: white;
+  }
+
+  .serenity {
+    color: whitesmoke;
+    opacity: 0.8;
+  }
+
+  .quote__button {
+    top: 10px;
+    left: 0;
+    max-width: 80%;
+    height: 100%;
+    padding: 20px;
+  }
+
+  .modal {
+    top: 25vh;
+    left: 0vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .modal__quote {
+    font-size: 40px;
+  }
+
+  .listen__subtitle {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .listen__title {
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,124 @@
+@import url(./vendor/fonts.css);
+@import url(./blocks/listen.css);
+@import url(./blocks/header.css);
+@import url(./blocks/about.css);
+
+@import url(./blocks/listen.css);
+@import url(./blocks/header.css);
+@import url(./blocks/about.css);
+
+
+body {
+    font-family: "Karla", "Helvetica Neue", sans-serif;
+
+}
+
+.guided {
+  background: linear-gradient(to bottom, #10002b, #ee3c05);
+  color: whitesmoke;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.guided__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guided__title {
+  font-family: Tangerine;
+  font-size: 64px;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.guided__description {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  opacity: 0.9;
+}
+
+.guided__modes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.guided__mode {
+  position: relative;
+  border: 2px solid whitesmoke;
+  background-color: #073116;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1em;
+  box-shadow: inset 0px 0px 12px rgba(240, 255, 255, 0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.guided__mode.active { background-color: #656565; transform: scale(1.1); }
+
+.guided__mode:hover {
+  background-color: #656565;
+}
+
+.breathing-circle {
+  width: 150px;
+  height: 150px;
+  margin-top: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(16, 0, 43, 0.8),
+    rgba(238, 60, 5, 0.4)
+  );
+  box-shadow: 0 0 30px rgba(238, 60, 5, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  transform-origin: center;
+ transition: transform 0.3s ease; 
+}
+
+.breathing-circle.inhale {
+    animation: expand 4s ease-in-out forwards;
+}
+
+.breathing-circle.exhale {
+    animation: shrink 8s ease-in-out forwards;
+}
+
+@keyframes expand {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.4);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.4);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.listen__iframe,
+.iframe-container iframe {
+    border: none;
+    width: 100%;
+    height: 352px;
+}
