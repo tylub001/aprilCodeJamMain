@@ -7,48 +7,53 @@
 .header__container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .header__title {
-  margin: 30vh 5vw 0;
-  max-width: 800px;
-  font-weight: 500;
+  margin: 0;
+  max-width: 100%;
+  font-weight: 600;
   letter-spacing: -0.6px;
-  font-size: 80px;
-  color: whitesmoke;
+  font-size: 110px;
+  color: rgba(255, 255, 255, 0.658);
   letter-spacing: 0.5px;
+  position: relative;
+  bottom: 200px;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
 }
 
 .welcome {
-  font-family: Tangerine;
+  font-family: "Tangerine", "Lucida Handwriting", "Garamond", serif;
   color: white;
-  position: absolute;
-  top: 8%;
   opacity: 0.1;
-  font-size: 20em;
+  font-size: 25vw;
   letter-spacing: 3px;
+  position: relative;
+  bottom: 100px;
+  width: 100%;
+  margin: 0;
 }
 
 .header__button {
-  position: relative;
-  left: 30%;
   border: 2px solid whitesmoke;
   background-color: transparent;
   border-radius: 40px;
-  padding: 10px 20px;
+  padding: 10px 30px;
   color: white;
-  font-size: 1em;
+  font-size: 2em;
   box-shadow: inset 0px 0px 12px rgba(240, 255, 255, 0.6);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: inline-block;
   text-decoration: none;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  bottom: 160px;
 }
 
 .header__button:hover {
-  opacity: 0.6;
+  background-color: blue;
 }
 
 .nav {
@@ -57,14 +62,16 @@
 }
 
 .nav__logo {
-  width: 70px;
+  width: 60px;
   height: 50px;
+  padding: 10px;
 }
 
 .nav__links {
   display: flex;
-  gap: 30px;
+  gap: 60px;
   list-style-type: none;
+  font-size: 20px;
   font-weight: 500;
   padding: 10px 20px;
   margin: 0;
@@ -74,54 +81,54 @@
   text-decoration: none;
   color: whitesmoke;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 
 .nav__link:hover {
-  opacity: 0.6;
+  color: gray;
+  text-shadow: none;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
   .nav {
     justify-content: center;
     font-size: 14px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav__links {
     gap: 10px;
-    align-self: center;
     padding: 0;
+    font-size: 16px;
   }
 
   .nav__logo {
     width: 50px;
     height: 40px;
+    padding: 10px 0;
   }
 
   .header__title {
-    font-size: 2.72em;
+    font-size: 16vw;
     position: relative;
-    bottom: -230px;
-    transform: translateX(-30%);
-    left: 27%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    bottom: 100px;
   }
 
   .header__button {
     width: auto;
-    padding: 15px 20px;
-    position: relative;
-    bottom: -430px;
-    left: 33%;
+    font-size: 18px;
+    margin-top: 10px;
+    bottom: 100px;
   }
 
   .welcome {
-    top: 30%;
-    font-size: 10em;
-    left: 25%;
-    transform: translateX(
-      -30%
-    ); /*shifts an element 30% to the left relative to its own width.*/
+    font-size: 40vw;
+    top: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }

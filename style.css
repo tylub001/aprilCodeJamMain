@@ -3,8 +3,14 @@
 @import url(./blocks/header.css);
 @import url(./blocks/about.css);
 
+@import url(./blocks/listen.css);
+@import url(./blocks/header.css);
+@import url(./blocks/about.css);
+
+
 body {
-  font-family: Karla;
+    font-family: "Karla", "Helvetica Neue", sans-serif;
+
 }
 
 .guided {
