@@ -39,7 +39,7 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
   align-items: center;
-  min-height: auto;
+  min-height: 100%;
   padding-bottom: 20px;
   
 }
@@ -107,7 +107,7 @@
 
 .bio-info {
   line-height: 1rem;
-  text-wrap: auto;
+  word-wrap: auto;
   font-size: 13px;
   font-family: "Inter", sans-serif;
   margin: 4px;
