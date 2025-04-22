@@ -162,10 +162,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 2;
 }
 
 .modal.show {
@@ -176,7 +176,7 @@
 .modal__container {
   border-radius: 20px;
   text-align: center;
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   animation: scaleUp 0.5s ease;
 }
@@ -188,6 +188,7 @@
   opacity: 0.9;
   text-shadow: 4px 4px 15px rgba(243, 243, 243, 1);
   letter-spacing: 1px;
+  padding: 20px;
 }
 
 @keyframes scaleUp {

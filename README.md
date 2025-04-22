@@ -29,9 +29,10 @@ Features a serene and aesthetically pleasing layout, using soft colors and balan
 - Hover and transition properties
 - JavaScript
 
-## Deployment 
+## Deployment
+
 This project is deployed using Github Page
-You can view the live site here: //paste url// 
+You can view the live site here: //paste url//
 
 To run this project on your local machine:
 
@@ -40,16 +41,24 @@ To run this project on your local machine:
 3. Open index.html in your browser
 
 ## System Requirements
-- Browser	Modern browsers (Chrome, Firefox, Safari, Edge)
-- OS	Windows, macOS, or Linux
-- Text Editor	VS Code or any code editor of your choice
 
+- Browser Modern browsers (Chrome, Firefox, Safari, Edge)
+- OS Windows, macOS, or Linux
+- Text Editor VS Code or any code editor of your choice
 
+## Future Plans
+
+- Personalized Breathing Modes: Users can customize timing based on their needs.
+- Daily Check-In System: To help users track their mindfulness progress.
+- Personalized Playlist: Useres can add their own playlists.
+- Dark Mode Option: For enhanced relaxation & reduced eye strain.
 
 ## Images
+
+![Images](./readme-images/headerfinal.png)
+![Images](./readme-images/header320px.png)
 ![Images](./readme-images/about320.png)
-![Images](./readme-images/Header.png)
-![Images](./readme-images/Header320.png)
-
 ![Images](./readme-images/ListenActive.png)
-
+![Images](./readme-images/breathing.png)
+![Images](./readme-images/teamfoooter.png)
+![Images](./readme-images/figmadesign.png)

@@ -1,21 +1,36 @@
 /* --------------Our Team------------- */
 
 .our__team {
-  height: 100%;
+  position: relative; /* Add this so ::before behaves properly */
+  min-height: 80vh; /* Ensures full screen height */
+  width: 100%; /* Ensures full width */
   margin: 0 auto;
   text-align: center;
-  padding: 45px 0 45px;
-  /* background-image: url(../images/IMG_7410.JPG); if you like image as a background 
-  /* background-size: cover; */
-  /* color: #fff; */ 
-  background-color: #ffc87c;
-  position: relative;
+  display: block;
+ 
 }
 
+.our__team::before {
+  content: "";
+  position: absolute;
+  top: 0; /* Aligns to the top */
+  left: 0; /* Aligns to the left */
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/orand.jpg);
+  background-size: cover; /* Ensures the image fills the space */
+  background-position: center; /* Centers the image */
+  opacity: 0.4;
+  z-index: -1;
+}
 .our__team h2 {
-  font-size: 2.5rem;
-  margin: 25px;
+  font-size: 4.5rem;
+  margin: 0;
   font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh; /* Full viewport height */
 }
 
 .team__container {
@@ -23,6 +38,10 @@
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
+  align-items: center;
+  min-height: auto;
+  padding-bottom: 20px;
+  
 }
 
 .team-member {
@@ -30,7 +49,7 @@
   height: 170px;
   object-fit: cover;
   border-radius: 10%;
-  border: 1px solid #e4e99f;
+ border: 1px solid black;
   margin-top: 4px;
 }
 
@@ -48,16 +67,19 @@
   font-family: "Inter", sans-serif;
   color: #2a1e1e;
   margin-top: 2px;
+  
 }
 
 .team__card {
-  border: 3px solid #e4e99f;
+ border: none;
   border-radius: 0.9rem;
-  background-color: #e4e99f;
+  background-color: #cececbbb;
   color: #000;
   height: 370px;
   width: 300px;
   overflow-y: scroll;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -71,6 +93,11 @@
   .team__card {
     height: 370px;
     width: 90%;
+  }
+
+  .our__team h2 {
+    font-size: 2.5em;
+    height: 10vh;
   }
 }
 
@@ -101,7 +128,7 @@
   align-items: center;
   font-family: "Inter", sans-serif;
   background-color: blue;
-  box-shadow: inset 2px 2px 8px rgba(240, 255, 255, 0.5);
+  box-shadow: inset 2px 2px 8px rgba(255, 255, 255, 0.5);
   color: #fff;
   cursor: pointer;
   transition-duration: 0.4s;
