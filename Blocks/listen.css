@@ -229,6 +229,7 @@
   .modal {
     width: 50%;
     height: 50%;
+    padding: 0;
   }
 
   .modal__quote {

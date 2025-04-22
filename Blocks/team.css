@@ -70,7 +70,7 @@
 @media screen and (max-width: 480px) {
   .team__card {
     height: 370px;
-    width: 300px;
+    width: 90%;
   }
 }
 
@@ -95,12 +95,13 @@
   height: 30px;
   font-size: 18px;
   border-radius: 10px;
-  border: 2px solid black;
+  border: none;
   display: block;
   margin: 25px auto;
   align-items: center;
   font-family: "Inter", sans-serif;
   background-color: blue;
+  box-shadow: inset 2px 2px 8px rgba(240, 255, 255, 0.5);
   color: #fff;
   cursor: pointer;
   transition-duration: 0.4s;
