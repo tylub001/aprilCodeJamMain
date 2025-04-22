@@ -23,6 +23,12 @@
   position: relative;
   bottom: 200px;
   text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.header__title:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
 }
 
 .welcome {
@@ -62,24 +68,27 @@
 }
 
 .nav__logo {
-  width: 60px;
-  height: 50px;
-  padding: 10px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  padding: 2px;
 }
 
 .nav__links {
   display: flex;
   gap: 60px;
   list-style-type: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  padding: 10px 20px;
+  padding: 20px 30px;
   margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .nav__link {
   text-decoration: none;
-  color: whitesmoke;
+  /* color: whitesmoke; */
+  color: #fff;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
@@ -105,8 +114,8 @@
   }
 
   .nav__logo {
-    width: 50px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     padding: 10px 0;
   }
 
