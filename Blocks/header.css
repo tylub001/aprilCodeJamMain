@@ -87,7 +87,6 @@
 
 .nav__link {
   text-decoration: none;
-  /* color: whitesmoke; */
   color: #fff;
   cursor: pointer;
   transition: 0.3s ease-in-out;

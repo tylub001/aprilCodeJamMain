@@ -2,8 +2,8 @@
 
 .our__team {
   position: relative; /* Add this so ::before behaves properly */
-  min-height: 80vh; /* Ensures full screen height */
-  width: 100%; /* Ensures full width */
+  min-height: 80vh; 
+  width: 100%; 
   margin: 0 auto;
   text-align: center;
   display: block;
@@ -13,13 +13,13 @@
 .our__team::before {
   content: "";
   position: absolute;
-  top: 0; /* Aligns to the top */
-  left: 0; /* Aligns to the left */
+  top: 0; 
+  left: 0; 
   width: 100%;
   height: 100%;
   background-image: url(../images/orand.jpg);
-  background-size: cover; /* Ensures the image fills the space */
-  background-position: center; /* Centers the image */
+  background-size: cover; 
+  background-position: center; 
   opacity: 0.4;
   z-index: -1;
 }
@@ -30,7 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20vh; /* Full viewport height */
+  height: 30vh;
 }
 
 .team__container {
@@ -97,7 +97,7 @@
 
   .our__team h2 {
     font-size: 2.5em;
-    height: 10vh;
+    height: 15vh;
   }
 }
 

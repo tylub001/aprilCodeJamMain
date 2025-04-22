@@ -88,12 +88,12 @@
   }
 
   .about {
-    height: 60vh;
+    min-height: 100vh;
   }
 }
 
 @media (max-width: 581px) {
   .about {
-    height: 100vh;
+    min-height: 100vh;
   }
 }
