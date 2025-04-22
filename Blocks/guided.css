@@ -127,6 +127,7 @@
 
   .guided__container {
     width: auto;
+    box-shadow: none;
   }
 
   .breathing-circle {
